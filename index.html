@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas class="line-chart"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+    <script>
+        var ctx = document.getElementsByClassName("line-chart")
+        var chartGraph = new Chart(ctx, {
+            type:'bar',
+            data : {
+                labels:['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+                datasets: [{
+                    label:"Taxa de cliques - 2019",
+                    data:[5,10,11,14,7,8,6,7,4,8,2,1],
+                    borderWidth: 1,
+                    borderColor: 'rgba(77,166,253,0,85',
+                    backgroundColor:'red',
+
+                },
+                {
+                    label:"Taxa de cliques - 2018",
+                    data:[1,2,8,17,4,1,2,3,4,5,7,10],
+                    borderWidth: 1,
+                    borderColor: 'rgba(6,204,6,0,85',
+                    backgroundColor:'green',
+
+                }]
+            },
+            options:{
+                title:{
+                    display:true,
+                    fontsize:20,
+                    text: 'Relatório de CTR Anual'
+                },
+                labels:{
+                    fontstyle: 'bold'
+                }
+            }
+        })
+
+    
+    </script>
+
+
+    
+</body>
+</html>
